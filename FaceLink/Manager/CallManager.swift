@@ -20,7 +20,7 @@ class CallManager {
     
     struct Constants {
         static let userToken =
-        ""
+        "TOKEN"
     }
     
     

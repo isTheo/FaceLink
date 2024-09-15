@@ -12,11 +12,12 @@ import UIKit
 //sign out
 
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        title = "Sign In"
+        view.backgroundColor = .systemBlue
     }
 
 

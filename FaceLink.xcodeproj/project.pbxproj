@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		95027F982C8F5BEC001C61D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95027F972C8F5BEC001C61D7 /* AppDelegate.swift */; };
 		95027F9A2C8F5BEC001C61D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95027F992C8F5BEC001C61D7 /* SceneDelegate.swift */; };
-		95027F9C2C8F5BEC001C61D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95027F9B2C8F5BEC001C61D7 /* ViewController.swift */; };
+		95027F9C2C8F5BEC001C61D7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95027F9B2C8F5BEC001C61D7 /* WelcomeViewController.swift */; };
 		95027FA12C8F5BED001C61D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95027FA02C8F5BED001C61D7 /* Assets.xcassets */; };
 		95027FA42C8F5BED001C61D7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 95027FA32C8F5BED001C61D7 /* Base */; };
 		95027FAD2C8F5FAC001C61D7 /* StreamVideo in Frameworks */ = {isa = PBXBuildFile; productRef = 95027FAC2C8F5FAC001C61D7 /* StreamVideo */; };
@@ -20,19 +20,21 @@
 		95027FC22C8F7908001C61D7 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 95027FC12C8F7908001C61D7 /* FirebaseAuthCombine-Community */; };
 		95027FE42C90C6A8001C61D7 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95027FE32C90C6A8001C61D7 /* CallManager.swift */; };
 		95027FE62C90C6BA001C61D7 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95027FE52C90C6BA001C61D7 /* AuthManager.swift */; };
+		950280092C978E25001C61D7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950280082C978E25001C61D7 /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		95027F942C8F5BEC001C61D7 /* FaceLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95027F972C8F5BEC001C61D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95027F992C8F5BEC001C61D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		95027F9B2C8F5BEC001C61D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95027F9B2C8F5BEC001C61D7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		95027FA02C8F5BED001C61D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95027FA32C8F5BED001C61D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95027FA52C8F5BED001C61D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95027FB22C8F60A5001C61D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		95027FE32C90C6A8001C61D7 /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		95027FE52C90C6BA001C61D7 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		950280082C978E25001C61D7 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +75,12 @@
 				95027FE72C90C6C1001C61D7 /* Manager */,
 				95027F972C8F5BEC001C61D7 /* AppDelegate.swift */,
 				95027F992C8F5BEC001C61D7 /* SceneDelegate.swift */,
-				95027F9B2C8F5BEC001C61D7 /* ViewController.swift */,
+				95027F9B2C8F5BEC001C61D7 /* WelcomeViewController.swift */,
 				95027FA02C8F5BED001C61D7 /* Assets.xcassets */,
 				95027FA22C8F5BED001C61D7 /* LaunchScreen.storyboard */,
 				95027FA52C8F5BED001C61D7 /* Info.plist */,
 				95027FB22C8F60A5001C61D7 /* GoogleService-Info.plist */,
+				950280082C978E25001C61D7 /* AccountViewController.swift */,
 			);
 			path = FaceLink;
 			sourceTree = "<group>";
@@ -173,8 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95027F9C2C8F5BEC001C61D7 /* ViewController.swift in Sources */,
+				95027F9C2C8F5BEC001C61D7 /* WelcomeViewController.swift in Sources */,
 				95027F982C8F5BEC001C61D7 /* AppDelegate.swift in Sources */,
+				950280092C978E25001C61D7 /* AccountViewController.swift in Sources */,
 				95027F9A2C8F5BEC001C61D7 /* SceneDelegate.swift in Sources */,
 				95027FE42C90C6A8001C61D7 /* CallManager.swift in Sources */,
 				95027FE62C90C6BA001C61D7 /* AuthManager.swift in Sources */,
