@@ -19,8 +19,7 @@ class CallManager {
     
     
     struct Constants {
-        static let userToken =
-        "TOKEN"
+        static let userToken = "TOKEN"
     }
     
     
@@ -51,7 +50,7 @@ class CallManager {
         
 //StreamVideo
         let video = StreamVideo(
-            apiKey: "",
+            apiKey: "API KEY",
             user: credential.user,
             token: credential.token) { result in
                 // Refresh token via real backend

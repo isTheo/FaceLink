@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,6 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let rootViewController: UIViewController
         if AuthManager.shared.isSignedIn {
             rootViewController = AccountViewController()
+            if let email = Auth.auth().currentUser?.email {
+                CallManager.shared.setUp(email: email)
+            }
         } else {
             rootViewController = WelcomeViewController()
         }

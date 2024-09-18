@@ -25,15 +25,15 @@ class WelcomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        AuthManager.shared.signUp(email: "joe@example.com", password: "password") { [weak self] done in
-            guard done else {
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self?.showAccount()
-            }
-        }
+//        AuthManager.shared.signUp(email: "john@example.com", password: "password") { [weak self] done in
+//            guard done else {
+//                return
+//            }
+//            
+//            DispatchQueue.main.async {
+//                self?.showAccount()
+//            }
+//        }
     }
     
     
