@@ -19,7 +19,34 @@ class WelcomeViewController: UIViewController {
         title = "Sign In"
         view.backgroundColor = .systemBlue
     }
-
-
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AuthManager.shared.signUp(email: "joe@example.com", password: "password") { [weak self] done in
+            guard done else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self?.showAccount()
+            }
+        }
+    }
+    
+    
+    
+    private func showAccount() {
+        let vc = UINavigationController(rootViewController: AccountViewController())
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    
+    
+    
+    
 }
 

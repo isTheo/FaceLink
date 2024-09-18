@@ -20,6 +20,9 @@ class AuthManager {
     
     func signIn(email: String, password: String, completion: @escaping (Bool) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if error == nil {
+                CallManager.shared.setUp(email: email)
+            }
             completion(error == nil)
         }
     }
@@ -28,6 +31,9 @@ class AuthManager {
     
     func signUp(email: String, password: String, completion: @escaping (Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { _, error in
+            if error == nil {
+                CallManager.shared.setUp(email: email)
+            }
             completion(error == nil)
         }
     }
