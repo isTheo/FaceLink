@@ -40,10 +40,9 @@ class CallManager {
     func setUp(email: String) {
         setUpCallViewModel()
         
-        
 //UserCredential
         let credential = UserCredentials(
-            user: .guest(email),
+            user: User(id: <#T##String#>, name: <#T##String?#>, imageURL: <#T##URL?#>)
             token: UserToken(rawValue: Constants.userToken)
         )
         

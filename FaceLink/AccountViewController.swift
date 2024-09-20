@@ -43,7 +43,10 @@ class AccountViewController: UIViewController {
     
     @objc private func joinCall() {
         guard let callViewModel = CallManager.shared.callViewModel else { return }
+        // Join call
         callViewModel.joinCall(callType: .default, callId: "CallIDHere")
+        // Start call
+//        callViewModel.startCall(callType: .default, callId: UIID().uuidString, members: [])
         
         showCallUI()
     }
