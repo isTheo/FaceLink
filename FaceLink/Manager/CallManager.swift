@@ -42,7 +42,7 @@ class CallManager {
         
 //UserCredential
         let credential = UserCredentials(
-            user: User(id: <#T##String#>, name: <#T##String?#>, imageURL: <#T##URL?#>)
+            user: .guest(email),
             token: UserToken(rawValue: Constants.userToken)
         )
         

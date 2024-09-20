@@ -32,10 +32,15 @@ class AccountViewController: UIViewController {
     
     
     @objc private func signOut() {
-        AuthManager.shared.signOut()
-        let vc = UINavigationController(rootViewController: WelcomeViewController())
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        let alert = UIAlertController(title: "Sign Out", message: "Are you sure you want to sign out?", preferredStyle: .alert)
+        alert.addAction(.init(title: "Cancel", style: .cancel))
+        alert.addAction(.init(title: "Sign Out", style: .destructive, handler: { _ in
+            AuthManager.shared.signOut()
+            let vc = UINavigationController(rootViewController: WelcomeViewController())
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }))
+        present(alert, animated: true)
     }
     
     

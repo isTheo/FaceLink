@@ -21,6 +21,7 @@
 		95027FE42C90C6A8001C61D7 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95027FE32C90C6A8001C61D7 /* CallManager.swift */; };
 		95027FE62C90C6BA001C61D7 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95027FE52C90C6BA001C61D7 /* AuthManager.swift */; };
 		950280092C978E25001C61D7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950280082C978E25001C61D7 /* AccountViewController.swift */; };
+		95B40DD62C9E31CF0071F51C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B40DD52C9E31CF0071F51C /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		95027FE32C90C6A8001C61D7 /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		95027FE52C90C6BA001C61D7 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		950280082C978E25001C61D7 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		95B40DD52C9E31CF0071F51C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				95027FA52C8F5BED001C61D7 /* Info.plist */,
 				95027FB22C8F60A5001C61D7 /* GoogleService-Info.plist */,
 				950280082C978E25001C61D7 /* AccountViewController.swift */,
+				95B40DD52C9E31CF0071F51C /* WelcomeView.swift */,
 			);
 			path = FaceLink;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				95027F9A2C8F5BEC001C61D7 /* SceneDelegate.swift in Sources */,
 				95027FE42C90C6A8001C61D7 /* CallManager.swift in Sources */,
 				95027FE62C90C6BA001C61D7 /* AuthManager.swift in Sources */,
+				95B40DD62C9E31CF0071F51C /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +332,7 @@
 				DEVELOPMENT_TEAM = H9BMU2K8BB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceLink/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FaceLink;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to share video during call.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to share audio during call.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -357,6 +362,7 @@
 				DEVELOPMENT_TEAM = H9BMU2K8BB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceLink/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FaceLink;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to share video during call.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to share audio during call.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

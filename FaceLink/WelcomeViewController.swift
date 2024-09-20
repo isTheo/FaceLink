@@ -12,8 +12,18 @@ import UIKit
 //sign out
 
 
-class WelcomeViewController: UIViewController {
-
+class WelcomeViewController: UIViewController, WelcomeViewDelegate {
+    
+    
+    override func loadView() {
+        let view = WelcomeView()
+        view.delegate = self
+        self.view = view
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Sign In"
@@ -42,6 +52,19 @@ class WelcomeViewController: UIViewController {
         let vc = UINavigationController(rootViewController: AccountViewController())
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
+    }
+    
+    
+    
+    
+    func didTapSignIn(email: String?, password: String?) {
+        
+    }
+    
+    
+    
+    func didTapSignUp(email: String?, password: String?) {
+        
     }
     
     
