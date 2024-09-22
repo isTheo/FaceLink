@@ -40,18 +40,20 @@ class WelcomeView: UIView {
         field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 50))
         field.leftViewMode = .always
         field.translatesAutoresizingMaskIntoConstraints = false
+        field.backgroundColor = .secondarySystemBackground
         return field
     }()
     
     
     private let passwordField: UITextField = {
         let field = UITextField()
-        field.placeholder = "Passowrd"
+        field.placeholder = "Password"
         field.isSecureTextEntry = true
         field.returnKeyType = .next
         field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 50))
         field.leftViewMode = .always
         field.translatesAutoresizingMaskIntoConstraints = false
+        field.backgroundColor = .secondarySystemBackground
         return field
     }()
     
@@ -63,8 +65,7 @@ class WelcomeView: UIView {
     private let button: UIButton = {
         let button = UIButton()
         button.setTitle("Sign In", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemBlue
+        button.setTitleColor(.label, for: .normal)
         button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -97,6 +98,32 @@ class WelcomeView: UIView {
         addSubview(button)
         addSubview(stateButton)
         
+        
+        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        stateButton.addTarget(self, action: #selector(didTapStateButton), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            emailField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            emailField.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 20),
+            emailField.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -20),
+            emailField.heightAnchor.constraint(equalToConstant: 50),
+            
+            passwordField.topAnchor.constraint(equalTo: emailField.topAnchor, constant: 60),
+            passwordField.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 20),
+            passwordField.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -20),
+            passwordField.heightAnchor.constraint(equalToConstant: 50),
+            
+            button.topAnchor.constraint(equalTo: passwordField.topAnchor, constant: 200),
+            button.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 20),
+            button.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -20),
+            button.heightAnchor.constraint(equalToConstant: 50),
+            
+            stateButton.topAnchor.constraint(equalTo: button.topAnchor, constant: 60),
+            stateButton.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 20),
+            stateButton.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -20),
+            stateButton.heightAnchor.constraint(equalToConstant: 50),
+            
+        ])
     }
     
     

@@ -26,8 +26,7 @@ class WelcomeViewController: UIViewController, WelcomeViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Sign In"
-        view.backgroundColor = .systemBlue
+        title = "Welcome"
     }
     
     
