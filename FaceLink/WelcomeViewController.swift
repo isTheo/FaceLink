@@ -9,7 +9,7 @@ import UIKit
 
 //Auth: sign up / sign in
 //Join call (stream)
-//sign out
+//Sign out
 
 
 class WelcomeViewController: UIViewController, WelcomeViewDelegate {
@@ -31,21 +31,6 @@ class WelcomeViewController: UIViewController, WelcomeViewDelegate {
     
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-//        AuthManager.shared.signUp(email: "john@example.com", password: "password") { [weak self] done in
-//            guard done else {
-//                return
-//            }
-//            
-//            DispatchQueue.main.async {
-//                self?.showAccount()
-//            }
-//        }
-    }
-    
-    
     
     private func showAccount() {
         let vc = UINavigationController(rootViewController: AccountViewController())
@@ -57,13 +42,44 @@ class WelcomeViewController: UIViewController, WelcomeViewDelegate {
     
     
     func didTapSignIn(email: String?, password: String?) {
+        guard let email, let password else {
+            let alert = UIAlertController(title: "Invalid Entry", message: "Please provide valid email/password", preferredStyle: .alert)
+            alert.addAction(.init(title: "Dismiss", style: .cancel))
+            present(alert, animated: true)
+            return
+        }
         
+        AuthManager.shared.signIn(email: email, password: password) { [weak self] done in
+            guard done else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self?.showAccount()
+            }
+        }
     }
     
     
     
+    
     func didTapSignUp(email: String?, password: String?) {
+        guard let email, let password else {
+            let alert = UIAlertController(title: "Invalid Entry", message: "Please provide valid email/password", preferredStyle: .alert)
+            alert.addAction(.init(title: "Dismiss", style: .cancel))
+            present(alert, animated: true)
+            return
+        }
         
+        AuthManager.shared.signUp(email: email, password: password) { [weak self] done in
+            guard done else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self?.showAccount()
+            }
+        }
     }
     
     

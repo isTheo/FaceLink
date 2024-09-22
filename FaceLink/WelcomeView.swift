@@ -67,6 +67,7 @@ class WelcomeView: UIView {
         button.setTitle("Sign In", for: .normal)
         button.setTitleColor(.label, for: .normal)
         button.layer.cornerRadius = 10
+        button.backgroundColor = .systemBlue
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -135,7 +136,13 @@ class WelcomeView: UIView {
     
     
     @objc private func didTapButton() {
-        
+        switch state {
+            case .sign_In:
+            delegate?.didTapSignIn(email: emailField.text, password: passwordField.text)
+            
+        case .sign_Up:
+            delegate?.didTapSignUp(email: emailField.text, password: passwordField.text)
+        }
     }
     
     
@@ -145,10 +152,12 @@ class WelcomeView: UIView {
             case .sign_In:
             state = .sign_Up
             stateButton.setTitle("Sign In", for: .normal)
+            button.setTitle("Sign Up", for: .normal)
             
         case .sign_Up:
             state = .sign_In
             stateButton.setTitle("Create Account", for: .normal)
+            button.setTitle("Sign In", for: .normal)
         }
     }
     
